@@ -1,0 +1,937 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap');
+
+html,body{
+    font-family: Quicksand;
+    overflow-x: hidden;
+}
+/*reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+a,li{
+    text-decoration: none;
+    list-style-type: none;
+    color: #000;
+}
+h2{
+    font-family: Quicksand;
+}
+body{
+    padding-top: 13%;    
+}
+/*HEADER*/
+.row-header{
+    background-color: #fafafa;
+    position: fixed;
+    width: 100%;
+    height: 25vh;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);   
+    display: flex;    
+}
+.box-header{
+    width:85%;    
+    margin: auto;    
+    display:flex;
+    justify-content: space-between;     
+    align-items: center;
+}
+
+.box-header .logo{
+    width: 25%;  
+    margin: 2.2% 0;       
+}
+/*navegação*/
+nav{
+    display: flex;
+    align-items: center;
+}
+.menu{
+    display:flex;      
+    margin-top: 4%;
+    
+}
+.menu li{
+    padding: 5px;       
+    margin-left: 20px;      
+}
+.menu li:first-child{
+    margin: 0;
+}
+.menu li a{    
+    text-transform: uppercase;   
+    transition: all .3s; 
+}
+.menu li a:hover{    
+    border-bottom-style: dotted;
+    border-width: 2px;
+    transition: all .1s ease-in-out;
+}
+/*Menu Mobile*/
+  
+  label{
+      font-size:  5rem;
+      display: none;
+      align-items: center;
+      justify-content:center;
+      color: #352821;
+  }
+  input[type="checkbox"]{
+      display: none;
+  }
+ 
+  input[type="checkbox"]:checked ~ .menu{
+      transform: translateX(-50vh);
+      transition: all .5s;
+  }
+.title-header{    
+    width:30%;
+    margin: auto;   
+    text-align: center; 
+}
+.title-header p, h2{
+    font-family: Poiret One;
+    letter-spacing: 4px;    
+}
+.title-header h2{    
+    font-size: 3rem;
+    font-weight: normal;    
+}
+.title-header p:nth-of-type(1){
+   font-size: 2.3rem;   
+}
+.title-header p:nth-of-type(2){
+    font-size: 1.5rem;
+    margin-top: 10px;    
+}
+
+
+.carrossel{
+    height: 400px;   
+    display: flex;
+    align-items: center; 
+    justify-content:center;     
+    position: relative;
+    overflow:hidden;
+}
+.foto{
+    position: absolute;
+    opacity: 0;
+    animation-name: slider-header;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;        
+    width: 100%;
+    min-height: 100%; 
+    z-index: -1;  
+}
+@keyframes slider-header{
+    25%{
+        opacity: 1; 
+         
+    }
+    50%{
+        opacity: 0;
+    }
+}
+@-moz-keyframes slider-header{
+    25%{
+        opacity: 1;
+        
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.foto:nth-child(2){
+    animation-delay: 5s;
+}
+
+.foto:nth-child(3){
+    animation-delay: 10s;
+}
+.foto:nth-child(4){
+    animation-delay: 15s;
+}
+
+
+/*titulo do slide*/
+.title-header{
+    color: #fff;
+    text-shadow: 0 3px 3px rgba(0, 0, 0, .80);    
+    
+}
+
+
+/*main content*/
+main h1, h3, h2{
+    text-align: center;
+}
+main h1{   
+    padding-top: 4%;    
+    font-weight: normal;
+    font-family: Poiret One;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    
+}
+.service{   
+    text-align: center;  
+}
+.service img{    
+    top: 35px;
+    position: relative;
+    width: 70px;
+    height: 70px;
+}
+.section-servico{    
+    background-color: rgba(235, 205, 195, 30%);
+    
+}
+.section-servico h3{
+    font-family: Quicksand;
+    font-weight: lighter;
+    font-size: 1.7rem;
+    letter-spacing: 3px;
+    padding: 2.6rem 0 3rem;
+}
+.section-servico h3::after{
+    content:"";
+    display: block;
+    width: 120px;
+    height:3px;
+    background-color: #795347;
+    margin: 10px auto;   
+}
+/*div extensao-cilios / design sobrancelha*/
+.extensao-cilios, .design-sobrancelha{
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content: center;     
+}
+.item-card{
+    width: 27%;
+    height: auto;    
+    margin: 2rem 1.5rem;
+    margin-bottom: 5%; 
+    transition: all .3s linear;   
+}
+.item-card:hover{
+    transform: scale(1.2);
+    transition: all .3s linear;
+}
+.item-card img{
+    width: 100%;
+    display:block;
+    border-radius: 26px;
+}
+
+
+/*Foto com legenda*/
+figure figcaption{
+    position: absolute;
+    top: 0;
+    left:0;
+    background-color: rgba(0,0,0, .4);
+    width: 100%;
+    height:100%;
+    border-radius: 26px;
+    opacity: 0;
+    color:#fff;
+    transition: all .3s linear; 
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;  
+}
+figure:hover figcaption{
+    opacity: 1;
+    transition: all .5s linear;       
+}
+figure figcaption h5{        
+    text-align: center;
+    color:#fff;
+    font-size: .8rem;
+    width:100%;    
+}
+figure figcaption p{    
+    text-align: center;    
+    font-size: .8rem;
+    width:100%;               
+}
+
+.design-sobrancelha{
+    padding-bottom: 5%;
+}
+/*Line */
+.line{
+    height: 3px;
+    background-color: #634F46;
+    display: block;
+    margin: 9% 0;
+}
+/*Promo*/
+.section-promo{
+    background-color: rgba(237, 220, 210, 50%);
+}
+.promo{
+    width: 70%;
+    margin: auto;
+    padding: 50px;
+    text-align: center;    
+    padding-top:2.3rem;  
+}
+.promo h2{
+    font-size: 1.9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-bottom: 5%;
+    font-family: Quicksand;
+}
+.promo h2::after{
+    content:"";
+    display: block;
+    width: 120px;
+    height:3px;
+    background-color: #795347;
+    margin: 10px auto;   
+}
+.promo p{
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: Quicksand;
+    letter-spacing: normal;
+}
+.promo img{
+    margin: 1.5rem 0;
+    width: 10vh;
+    height: auto;
+}
+/*Botão eu quero*/
+.btn_eu_quero{
+    width:  300px;
+    height: 53px;
+    margin: auto;    
+    background-color: #29150f;
+    display: block;    
+    color:#fff;
+    font-family: Quicksand;
+    font-weight: bold;
+    font-size: 2rem;
+    border: none;
+    border-radius: 26px;
+    cursor: pointer;
+    transition: 1s;
+}
+.btn_anima:hover{
+    background-color: #491f12;
+    color: #fff;    
+    transition: .5s;
+    transform: scale(1.2);
+}
+
+/*img-heart divisão */
+.img-heart{    
+    text-align: center;
+    padding:  4rem 0;
+}
+
+/*Sobre*/
+.title-sobre, .title-dados{
+    font-family: Poiret One;
+    font-weight: normal;
+    font-size: 2.3rem;
+    margin: 5% 0;
+}
+.title-sobre::after{
+    content:"";
+    display: block;
+    width: 120px;
+    height:3px;
+    background-color: #795347;
+    margin: 10px auto;   
+}
+.sobre{    
+    display:flex;
+    width:70%;
+    margin: auto; 
+    padding: 30px;   
+    justify-content: space-between;    
+}
+.sobre img{
+    border-radius: 44px;
+    animation: animateleft-img 2s;    
+}
+
+.text-sobre{
+    width: 52%;    
+    display:flex;
+    align-items: center; 
+    animation: animateright-text 2s;              
+}
+.text-sobre p{
+    font-family: Quicksand;
+    text-align: left;
+    font-weight: lighter;    
+    font-size: 17px;
+}
+
+/*Animação sobre*/
+@keyframes animateright-text{
+    from {
+        transform: translateX(52%);
+    }
+    to{
+        
+    }    
+}
+@keyframes animateleft-img{
+    from {
+        transform: translateX(-52%);
+    }
+    to{
+        
+    }  
+}
+
+
+/*img-coraçao -preto*/
+.img-coracao{
+    display: block;
+    text-align: center;
+    margin-bottom: 4rem;
+    margin-top: 1.5rem;
+}
+
+/*Line*/
+.line-second{
+    height: 3px;
+    background-color: #634F46;
+    display: block;    
+}
+
+/*Principios*/
+.principios{
+    display:flex;    
+    justify-content:center;
+}
+.item-info{
+    width:30%;         
+    padding: 30px;    
+    font-family: Roboto;
+    text-align: center; 
+    margin: 3rem 0;   
+}
+.item-info h4{
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+.item-info h4::after{
+    content:"";
+    display: block;
+    width: 40px;
+    height:3px;
+    background-color: #795347;
+    margin: 10px auto;   
+}
+.item-info p{
+    margin-top: 2rem;
+    font-family: Quicksand;
+    font-size: 1.2rem;
+}
+.principios .item-info:nth-last-of-type(2){   
+    border-left: 3px solid #c4c4c4;
+    border-right: 3px solid #c4c4c4; 
+}
+
+/*background img-flores*/
+#formulario{
+    background-image: url(../_img/flor1.png), url(../_img/flor2.png);
+    background-size: 28%;
+    background-repeat: no-repeat;  
+    background-position: top right -6%, bottom -10% left -5%;     
+    padding-bottom: 50px;
+}
+
+/*formulario para receber promoçoes diarias*/
+section > .title{
+    margin: 0;
+    padding-top: 5%;
+    padding-bottom: 4%;
+}
+.box-formulario{   
+    width: 50%;
+    margin: auto;    
+    display:flex;
+    justify-content: center;      
+}
+.title-dados::after{
+    content:"";
+    display: block;
+    width: 120px;
+    height:3px;
+    background-color: #795347;
+    margin: 10px auto;   
+}
+.formulario{
+    display: flex;
+    flex-direction: column;        
+}
+.formulario label{
+    font-family: Poiret One;    
+    font-size: 1.2rem;
+    color:#000;
+    display: block;
+}
+.formulario input{
+    display: block;
+    width: 391px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px;
+    background-color: #c4c4c4;
+    margin: 6px 0;
+    
+}
+.formulario textarea{
+    display: block;
+    border-radius: 18px;
+    width: 391px;
+    height: 108px;
+    outline: none;
+    border: 1px;
+    padding: 10px;
+    background-color: #c4c4c4;
+    resize: none;
+}
+.formulario label:last-child{
+    text-align: center;
+    margin-top: 30px;    
+}
+.formulario label textarea:last-child{    
+    margin-top: 10px;
+}/*fim style formulario*/
+
+/*Botão enviar*/
+.btn_enviar{
+    width:  196px;
+    height: 40px;
+    margin: auto;    
+    background-color: #352821;
+    display: block;    
+    color:#fff;
+    font-family: Poiret One;    
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 26px;       
+    margin-bottom: 4rem;
+    transition: .5s;
+    margin-top: 5%;
+}
+.btn_enviar:hover{
+    background-color: #491f12;
+    color: #fff;
+    border: 1px solid;
+    transition: .5s;
+    transform: scale(1.2);
+}
+.whats-fixed{
+    display:none;
+}
+/*Footer*/
+footer{
+    background-color: #634F46;    
+}
+.block-img{
+    width: 40%;    
+    margin: 0 10px;    
+}
+.block-img img{
+  max-width: 100%;
+  padding-top: 2%;  
+}
+.row-rodape{
+    color: #fff;
+    font-size: 13px;
+    letter-spacing: 3px;
+    padding-top: 30px; 
+    width: 90%;
+    margin: auto;
+    display: flex;
+    text-align: center; 
+        
+}
+.title-rodape{
+    font-family: Quicksand;
+    font-size: 1.2rem;
+    text-align: center;
+    display: block;
+    position: relative; 
+    font-style: normal;     
+}
+.title-rodape::after{
+    content:"";
+    display: block;    
+    height:3px;
+    background-color: #fff;
+    margin: 3% 10% 5% 10%;     
+}
+
+.block-rodape{   
+    width: 30%; 
+    margin-top: 5%; 
+    font-style: normal;      
+}
+.info-rodape{
+    margin: 10% 0;      
+    margin-left: 20px;          
+}
+.info-rodape p{       
+    text-align: left;     
+    margin: 0 10%;  
+    letter-spacing:2px; 
+    font-style: normal;  
+    font-size: 14px;      
+}
+.info-rodape a{
+    color: #fff;
+    letter-spacing: 2px; 
+}
+.email-rodape:hover{
+    color: #251c17;
+}
+.icon-midia-social{
+    margin: 0 2px;
+    display: inline-block;
+    transition: all .3s linear;
+}
+.icon-midia-social:hover{    
+    transform: scale(1.2);
+    transition: all .3s linear;
+}
+
+
+/*Maps*/
+
+.maps iframe{
+    height: 30vh;
+    width: 80%;
+    
+}
+/*Direitos reservados*/
+.direitos{
+    color:#fff;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-align: center;
+    display: block;
+    padding: 10px;      
+}
+
+/*Midia queries*/
+@media only screen and (max-width: 963px){
+   
+   nav{
+       display:flex;
+       flex-direction: column;
+   }
+   .menu{         
+    flex-direction: column;
+    margin: 0; 
+    position: absolute;  
+    top: 18vh;
+    right: -50vh;
+    width: 50vh;    
+    background-color: #352821;
+    justify-content: space-around;
+    transition: all .5s;
+    z-index: 5;
+}
+    .menu li{
+        margin-left: 0;        
+    }
+    .menu a{        
+        display: block;
+        padding: 15px;
+        color:#fff;        
+        font-size: 1.4rem;
+    }   
+    .menu li a:hover{
+        background-color: rgba(237, 220, 210, 50%);
+        border-bottom-style: none;
+        color: #000;
+    }
+    label{
+        display: block;
+        cursor: pointer;
+    }    
+    .box-header .logo{
+        width: 35%;  
+        margin: 2.2% 0;    
+    } 
+    .title-header{
+        width: 100%;
+    }
+    .extensao-cilios, .design-sobrancelha{
+        width: 95%;        
+        padding-bottom: 2rem;  
+    }
+
+    .item-card{
+        width: 40%;
+        height: auto;          
+        margin-bottom: 1%; 
+        transition: all .3s linear;         
+    }
+
+    .sobre{    
+        display:flex;
+        width: 95%;
+        margin: auto; 
+        padding: 10px;   
+        justify-content: space-between;
+        
+    }
+    .sobre img{
+        border-radius: 44px;
+        animation: animateleft-img 2s;   
+        width: 35%;
+        max-height: 100%;
+    }
+    .text-sobre{
+        width: 60%;    
+        display:flex;
+        align-items: center; 
+        animation: animateright-text 2s; 
+                   
+    }
+    .text-sobre p{
+        font-family: Quicksand;
+        text-align: left;
+        font-weight: lighter;    
+        font-size: 0.9em;
+        width: 100%;
+    }    
+
+}
+@media only screen and (max-width: 680px){
+    .box-header .logo{
+        width: 50%;  
+          
+    } 
+    .title-header{
+        width: 100%;        
+    }
+
+    .extensao-cilios, .design-sobrancelha{
+        width: 100%;        
+        padding-bottom: 2rem;         
+    }
+
+    .item-card{
+        width: 46%;
+        height: auto;          
+        margin-bottom: 1%; 
+        transition: all .3s linear;   
+        margin: 1rem 9px ;    
+    }
+
+    .item-card:hover{
+        transform: scale(1.05);
+        transition: all .3s linear;
+    }
+    
+    .promo{
+        width: 95%;         
+    }    
+
+    .promo p{
+        font-size: 1.5rem;        
+    }
+
+    .btn_eu_quero{
+        width:  200px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .sobre{                    
+        padding: 0px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .sobre img{
+       border-radius: 0;
+       animation: none;
+       width: 50%;       
+       margin-bottom: 5%;
+
+    }
+    
+    .text-sobre{
+        width: 95%;       
+        animation: none;                        
+    }
+    .text-sobre p{          
+        font-size: 14px;
+        text-align: justify;  
+    }
+
+    .principios{
+        display:flex;    
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item-info{
+        width: 100%;
+        padding: 30px 30px 75px;         
+        margin: 0;
+    }  
+    .principios .item-info:nth-last-of-type(2){   
+        border-top: 3px solid #c4c4c4;
+        border-bottom: 3px solid #c4c4c4; 
+        border-left: none;
+        border-right: none; 
+        padding: 30px;
+    }
+    #formulario{
+        background-size: 34%;
+        background-position: top right -6%, bottom  left -5% ;     
+        padding-bottom: 10px;
+    }
+    .row-rodape{               
+        padding-top: 10px; 
+        width: 100%;
+        align-items: center;
+        display: flex;       
+        flex-direction: column;           
+    }
+
+    .block-img{
+        width: 100%;    
+        margin: 0 10px;
+        
+    }
+    .block-img img{
+      width: 45vh;
+      padding-top: 2%;
+      
+    }
+
+    .block-rodape{        
+        -webkit-order: 2;
+        width: 100%;            
+    }
+
+    .info-rodape{
+        margin:  0;                        
+    } 
+
+    .title-midias-sociais{
+        margin-top: 3vh;
+    }
+
+    .icon-midia-social{
+        margin: -3rem 2px;
+        display: inline-block;
+        transition: all .3s linear;        
+    }
+}
+@media only screen and (max-width:470px){
+    body{
+        padding-top: 25%;
+    }
+    .row-header{        
+        height: 18vh;          
+    }
+    .box-header .logo{
+        width: 60%;            
+    }   
+    .title-header{        
+        text-shadow: 0 3px 3px rgba(0, 0, 0, .25);       
+    }
+    .title-header p:nth-of-type(1){        
+        font-size: 1.7rem;
+    }
+    .extensao-cilios, .design-sobrancelha{
+        width: 100%;        
+        padding-bottom: 2rem;         
+    }
+    .item-card{
+        width: 90%;          
+    }
+    figure figcaption h5{           
+        font-size: 1.1rem;          
+    }
+    figure figcaption p{            
+        font-size: .9rem;                      
+    }
+    .btn_enviar{        
+        margin-top: 9%;
+        margin-bottom: 9%;
+    }
+    .promo p{
+        font-size: 1.1rem;         
+     }
+    #formulario{         
+        background-size: 35%;
+        background-position: top right -10%, bottom  left -5% ;     
+        padding-bottom: 20px;
+    }
+    .sobre img{
+        width: 70%;
+    }
+    .text-sobre p{
+        font-size: 14px;
+    }
+    .whats-fixed{
+        position: fixed;
+        bottom: 1rem;
+        right: 1.5rem;
+        width: 70px;
+        height: 70px;
+        display:block;
+        cursor: pointer;        
+    }
+    .whats-fixed img{
+        max-width: 100%;        
+    }
+    .box-formulario{        
+        width: 100%;
+        margin-top: 15%;       
+    }
+    .title-dados{        
+        font-size: 1.6rem;  
+        margin-top: 15%;      
+    } 
+    .formulario{
+        width: 90%;
+        margin: auto;       
+    }
+    .formulario input{
+        width: 100%;
+    }
+    .formulario .textarea{
+        width:100%
+    }  
+    .img-heart img, .img-coracao img{        
+        width: 90%;
+    }
+    
+   
+   
+}
