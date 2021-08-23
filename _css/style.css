@@ -641,7 +641,7 @@ footer{
 }
 
 /*Midia queries*/
-@media only screen and (max-width: 963px){
+@media only screen and (max-width: 1024px){
    
    nav{
        display:flex;
@@ -651,7 +651,7 @@ footer{
     flex-direction: column;
     margin: 0; 
     position: absolute;  
-    top: 18vh;
+    top: 25vh;
     right: -50vh;
     width: 50vh;    
     background-color: #352821;
@@ -857,6 +857,9 @@ footer{
     }
     .row-header{        
         height: 18vh;          
+    }
+    .menu{         
+        top: 18vh;
     }
     .box-header .logo{
         width: 60%;            
