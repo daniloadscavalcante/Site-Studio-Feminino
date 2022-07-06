@@ -5,6 +5,7 @@
 html,body{
     font-family: Quicksand;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 /*reset*/
 *{
@@ -382,25 +383,6 @@ figure figcaption p{
     font-weight: lighter;    
     font-size: 17px;
 }
-
-/*Animação sobre*/
-@keyframes animateright-text{
-    from {
-        transform: translateX(52%);
-    }
-    to{
-        
-    }    
-}
-@keyframes animateleft-img{
-    from {
-        transform: translateX(-52%);
-    }
-    to{
-        
-    }  
-}
-
 
 /*img-coraçao -preto*/
 .img-coracao{

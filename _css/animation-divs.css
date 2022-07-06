@@ -1,0 +1,49 @@
+/*Animação*/
+[data-anime]{
+    opacity: 0;
+    transition: .5s;
+}
+[data-anime="left"]{
+    transform:translate3d(-150px, 0, 0)
+}
+[data-anime="top"]{
+    transform:translate3d(0, -150px, 0)
+}
+[data-anime="right"]{
+    transform:translate3d(150px, 0, 0)
+}
+[data-anime="bottom"]{
+    transform:translate3d(0, 100px, 0)
+}
+[data-anime].animate{
+    opacity: 1;
+    transform:translate3d(0px, 0px, 0px);
+}
+
+/*Back Top*/
+.backtop{
+    position: fixed;    
+    bottom: 50px;
+    right: 30px;    
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    background-color: rgba(73, 31, 18, .9);
+    border-radius: 50%;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+    transition: all .3s;
+}
+.arrow{
+    border: solid #FFF;
+    border-width: 0 7px 7px 0;
+    padding: 5px;
+    display: inline-block;
+}
+.up{
+    transform:rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}

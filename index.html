@@ -21,6 +21,7 @@
 
     <!--import css-->
     <link rel="stylesheet" href="_css/style.css">
+    <link rel="stylesheet" href="_css/animation-divs.css">
    
 </head>
 
@@ -75,7 +76,7 @@
             <h3>Extensão de Cílios</h3>
             <div class="extensao-cilios">
 
-                <article class="item-card">
+                <article class="item-card" data-anime="left">
                     <figure>
                         <a href="#"><img src="_img/thumbs/cilios-fio-a-fio2.jpg" alt="imagem cílios classico fio a fio"></a>
                         <figcaption>
@@ -87,7 +88,7 @@
                     </figure>
                 </article>
 
-                <article class="item-card">
+                <article class="item-card" data-anime="top">
 
                     <figure>
                         <a href="#"><img src="_img/thumbs/classico-fio-a-fio.jpg" alt=" imagem cílios classico fio a fio"></a>
@@ -99,7 +100,7 @@
                     </figure>
                 </article>
 
-                <article class="item-card">
+                <article class="item-card" data-anime="right">
 
                     <figure>
                         <a href="#"><img src="_img/thumbs/cilios-volum-brasileiro.jpg" alt="imagem cíclio volume brasileiro"></a>
@@ -112,7 +113,7 @@
                     </figure>
                 </article>
 
-                <article class="item-card">
+                <article class="item-card" data-anime="left">
 
                     <figure>
                         <a href="#"><img src="_img/thumbs/ciclios-lash-lifting.jpg" alt="imagem cilios lash lifting"></a>
@@ -125,7 +126,7 @@
                     </figure>
                 </article>
 
-                <article class="item-card">
+                <article class="item-card" data-anime="top">
 
                     <figure>
                         <a href="#"><img src="_img/thumbs/volume hibrido.jpg" alt="imagem cílios volume híbrodo"></a>
@@ -138,7 +139,7 @@
                     </figure>
                 </article>
 
-                <article class="item-card">
+                <article class="item-card" data-anime="right">
 
                     <figure>
                         <a href="#"><img src="_img/thumbs/clássico-fio-a-fio+design.jpg" alt="imagem cílios volume brasileiro"></a>
@@ -180,7 +181,7 @@
             <h3>Design de Sobrancelhas</h3>
             <div class="design-sobrancelha">
 
-                <article class="item-card">
+                <article class="item-card" data-anime="right">
 
                     <figure>
                         <a href="#"><img src="_img/thumbs/design-com-henna3.jpg" alt="imagem sobrancelha de henna"></a>
@@ -192,7 +193,7 @@
                     </figure>
                 </article>
 
-                <article class="item-card">
+                <article class="item-card" data-anime="bottom">
 
                     <figure>
                         <a href="#"><img src="_img/thumbs/design-sobrancelha.jpg" alt="imagem design da sobrancelha "></a>
@@ -204,7 +205,7 @@
                     </figure>
                 </article>
 
-                <article class="item-card">
+                <article class="item-card" data-anime="left">
 
                     <figure>
                         <a href="#"><img src="_img/thumbs/design-henna.jpg" alt="imagem design com henna"></a>
@@ -217,7 +218,7 @@
 
                 </article>
 
-                <article class="item-card">
+                <article class="item-card" data-anime="left">
 
                     <figure>
                         <a href="#"><img src="_img/thumbs/design-com-henna2.jpg" alt="imagem design com henna"></a>
@@ -229,7 +230,7 @@
                     </figure>
                 </article>
 
-                <article class="item-card">                    
+                <article class="item-card" data-anime="top">                    
 
                     <figure>
                         <a href="#"><img src="_img/thumbs/design-com-henna.jpg" alt="imagem design com henna"></a>
@@ -241,7 +242,7 @@
                     </figure>
                 </article>
 
-                <article class="item-card">
+                <article class="item-card" data-anime="right">
 
                     <figure>
                         <a href="#"><img src="_img/thumbs/design com henna1.jpg" alt="imagem design com henna"></a>
@@ -261,9 +262,9 @@
         <section class="section-sobre" id="section-sobre">
             <h3 class="title-sobre">Sobre Milena</h3>
             <div class="sobre">
-                <img src="_img/milena.jpg" alt="imagem da proprietaria da empresa">
+                <img src="_img/milena.jpg" alt="imagem da proprietaria da empresa" data-anime="left">
 
-                <div class="text-sobre">
+                <div class="text-sobre" data-anime="right">
                     <p>Sempre gostei muito do mundo da beleza, realizava muitas maquiagens, sobrancelhas... sempre aperfeiçoando novas técnicas. Com o passar do tempo, descobri sobre a extensão de cílios, fiquei apaixonada! E decidi que queria aumentar o meu conhecimento na área. Realizei cursos, comecei realizando pequenos trabalhos em amigos. Até perceber que esse mundo de design é minha paixão, quando descobri esse mundo resolvi realizar mais cursos para obter todos os conhecimentos necessários para empreender, e assim nasceu o <strong>Studio Universo Feminino</strong>, sua beleza aqui ! é muito gratificante ver a felicidade dos meus clientes ao saírem do meu studio satisfeitos com o resultado e qualidade dos nossos serviços.
                     </p>
                 </div>
@@ -341,7 +342,13 @@
         <div class="whats-fixed">
            <a href="http://wa.me/5511974540229" target="_blank"><img src="_img/whats.png" alt="botão whatssap"></a>
         </div>
+        <!--Back Top-->
+
+        <div class="backtop">
+            <i class="arrow up"></i>
+        </div>
         <!--Rodapé-->
+
         <footer>
             <section class="row-rodape">
                 <div class="block-rodape">
@@ -388,10 +395,11 @@
         <!--End Rodapé-->
 
     </main>
-    <!--import js-->
+    <!--import js-->    
     <script type="text/javascript" src="_js/main.js"></script>
     <script type="text/javascript" src="_js/hidenMenu.js"></script>
-  				
+    <script type="text/javascript" src="_js/animation-divs.js"></script>
+    
 </body>
 
 </html>
