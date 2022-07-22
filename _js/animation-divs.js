@@ -41,18 +41,25 @@ if(section.length){
 
 /*botao backtop */
 
-const btnTop = document.querySelector('.backtop');
- 
-btnTop.addEventListener('click', function(){
-    window.scrollTo(0,0);
-})
+const btnbackTop = document.querySelector('.backtop');
+
+
 
 document.addEventListener("scroll", hiddenBtnTop); // colocando evento no documento
 function hiddenBtnTop(){
-    if(window.scrollY > 10){//scroolY retorna a possição que voce esta na vertical
-        btnTop.style.display = "flex";
+    if(window.scrollY > 300){//scroolY retorna a possição que voce esta na vertical
+        btnbackTop.style.display = "flex";
     }else{
-        btnTop.style.display = "none";
+        btnbackTop.style.display = "none";
     }
 }
 hiddenBtnTop()
+
+function back_toTop(){
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    })
+  
+}
+      

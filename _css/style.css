@@ -871,8 +871,8 @@ footer{
         position: fixed;
         bottom: 1rem;
         right: 1.5rem;
-        width: 70px;
-        height: 70px;
+        width: 65px;
+        height: 65px;
         display:block;
         cursor: pointer;        
     }
